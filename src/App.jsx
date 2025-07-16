@@ -149,13 +149,13 @@ function App() {
               </Typography>
             )}
           </Box>
-          <Box sx={{ marginTop: 2, marginBottom: 2 }}>
+          {/* <Box sx={{ marginTop: 2, marginBottom: 2 }}>
             <Typography variant="body2">Debug Info:</Typography>
             <Typography variant="body2">hasMore: {hasMore ? "true" : "false"}</Typography>
             <Typography variant="body2">
               Visible Photographers: {filteredPhotographers.length}
             </Typography>
-          </Box>
+          </Box> */}
           {!hasMore ? (
             <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
               <Button variant="contained" onClick={handleLoadMoreClick}>
