@@ -1,0 +1,46 @@
+.profile-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.profile-info, .gallery, .reviews, .inquiry, .message {
+  margin-bottom: 20px;
+}
+
+.gallery .images {
+  display: flex;
+  gap: 10px;
+}
+
+.gallery .image {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review, .message form {
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}

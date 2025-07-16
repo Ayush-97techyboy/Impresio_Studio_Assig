@@ -1,0 +1,223 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #F5F4F0;
+  color: #251d19;
+}
+
+/* App Container */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #CBC1BC;
+  color: #F5F4F0;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header nav a {
+  color: #F5F4F0;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.header nav a:hover {
+  color: #F2F0EC;
+}
+
+/* Main Content Layout */
+.main-content {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+}
+
+/* Filters (Sidebar) */
+.filters {
+  flex: 0 0 300px;
+  padding: 1.5rem;
+  background-color: #F4F3EF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.filters h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #CBC1BC;
+}
+
+.filters label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.filters input[type="range"],
+.filters input[type="text"],
+.filters select {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #CBC1BC;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.filters div {
+  margin-bottom: 1rem;
+}
+
+/* Photographer Cards */
+.photographer-cards {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.photographer-card {
+  background-color: #F4F3EF;
+  border: 1px solid #CBC1BC;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photographer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.photographer-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.photographer-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #251d19; /* Darker shade for better contrast */
+}
+
+.photographer-card p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #251d19; /* Darker shade for better contrast */
+}
+
+.photographer-card button {
+  padding: 0.8rem 1.5rem;
+  background-color: #CBC1BC;
+  color: #F5F4F0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.photographer-card button:hover {
+  background-color: #F2F0EC;
+}
+
+/* Footer */
+.footer {
+  background-color: #CBC1BC;
+  color: #F5F4F0;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer nav {
+  margin-top: 1rem;
+}
+
+.footer nav a {
+  color: #F5F4F0;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.footer nav a:hover {
+  color: #F2F0EC;
+}
+
+.footer p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .filters {
+    flex: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  .photographer-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .filters {
+    flex: 1;
+    padding: 1rem;
+    width: 100%; /* Ensure it spans the full width */
+  }
+
+  .filters label {
+    font-size: 0.9rem;
+  }
+
+  .photographer-card h3 {
+    font-size: 1rem;
+  }
+
+  .photographer-card p {
+    font-size: 0.9rem;
+  }
+
+  .photographer-card button {
+    font-size: 0.9rem;
+  }
+}
