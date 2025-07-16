@@ -30,7 +30,9 @@ export const PhotoProvider = ({ children }) => {
     const fetchPhotographers = async () => {
       try {
         setLoading(true);
+        // For local development, use hardcoded backend API URL
         const response = await fetch('http://localhost:3001/photographers');
+        // TODO: Use environment variable VITE_API_URL for deployment
         if (!response.ok) {
           throw new Error('Failed to fetch photographers');
         }
